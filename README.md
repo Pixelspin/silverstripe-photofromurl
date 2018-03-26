@@ -6,7 +6,7 @@ composer require pixelspin/silverstripe-photofromurl
 ```
 
 ```
-PhotofromurlButton::create('FieldName', 'ButtonTitle', $this, 'RelationName')
+PhotofromurlButton::create('FieldName', 'ButtonTitle', $this, 'RelationName', 'FolderName')
 ```
 
 ## Notice

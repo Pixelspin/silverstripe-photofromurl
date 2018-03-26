@@ -72,7 +72,7 @@ class PhotofromurlButton extends FormField {
         if($ext === false){
             return json_encode([
                 'success' => false,
-                'message' => 'Invalid photo'
+                'message' => "Can't find a extension"
             ]);
         }
 
@@ -100,6 +100,10 @@ class PhotofromurlButton extends FormField {
         return json_encode([
             'success' => true
         ]);
+    }
+
+    public function ObjectExists(){
+        return $this->object->exists();
     }
 
     public function HandleLink(){
