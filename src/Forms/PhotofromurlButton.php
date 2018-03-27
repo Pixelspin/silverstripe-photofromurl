@@ -87,6 +87,7 @@ class PhotofromurlButton extends FormField {
         $image->setFromLocalFile($imagePath);
         $image->ParentID = $saveFolder->ID;
         $image->write();
+        $image->publishRecursive();
 
         if($relationType == 'many_many'){
             $object->$relationName()->add($image);
